@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat/shortcuts-printable-page",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "feat/shortcuts-printable-page": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "feat/shortcuts-printable-page",
+    "origin"
+  ]
+}

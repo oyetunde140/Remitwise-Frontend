@@ -6,10 +6,10 @@
     "postinstall": "node scripts/patch-next-config.js",
     "generate:types": "openapi-typescript ./openapi.yaml --output ./src/api/types.ts",
     "prebuild": "npm run generate:types",
-    "dev": "next dev",
+    "dev": "node init && next dev",
     "mock:backend": "node scripts/mock-backend.js",
-    "build": "next build --webpack",
-    "start": "next start",
+    "build": "node init && next build --webpack",
+    "start": "node init && next start",
     "check:img-alt": "node scripts/check-img-alt.js",
     "lint": "eslint . && npm run check:img-alt",
     "test": "npm run test:unit",
@@ -25,7 +25,7 @@
     "test:e2e": "playwright test",
     "test:perf": "npx playwright test tests/e2e/dashboard-performance.spec.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --quiet"
+    "build-storybook": "node init && storybook build --quiet"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
